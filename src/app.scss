@@ -1,0 +1,13 @@
+// vendor imports
+@import '../node_modules/angular-material/angular-material';
+// app imports
+@import 'common/common';
+
+.app {
+  height: 100%;
+  background-color: $baseBgColor;
+
+  nav {
+    text-align: center;
+  }
+}

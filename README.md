@@ -2,6 +2,10 @@
 
 1 Create an AngularJS 1.5 Project with Typescript 2
 
+  npm install
+  
+  npm start
+
 2 Include Twitter Bootstrap 3.3.6 and Angular Bootstrap
 
 3 Setup a project structur
