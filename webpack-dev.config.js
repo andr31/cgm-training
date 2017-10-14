@@ -15,12 +15,10 @@ module.exports = {
   devtool: "eval-source-map",
   watch: true,
   cache: true,
-  debug: true,
   entry: {
     app: [
-      'webpack-dev-server/client?http://localhost:8000',
-      'webpack/hot/dev-server',
-      PATHS.app
+      'webpack-dev-server/client?http://localhost:3000',
+      'webpack/hot/dev-server'
     ]
   },
   output: {
@@ -34,26 +32,13 @@ module.exports = {
     }
   },
   resolve: {
-    root: __dirname,
-    extensions: ['', '.ts', '.js', '.json', '.scss']
+    extensions: ['.ts', '.js', '.json', '.scss']
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.ts$/,
-        loader: "tslint"
-      }
-    ],
-    loaders: loaders
-  },
-  postcss: function () {
-    return [autoprefixer, precss];
+    rules: loaders
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.DedupePlugin(),
     new ExtractTextPlugin("app.css", {allChunks: true})
   ]
 };

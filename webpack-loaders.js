@@ -1,19 +1,17 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-module.exports = [
-  {
-    test: /\.ts$/,
-    loader: 'ts-loader'
-  },
-  {
-    test: /\.html$/,
-    loader: 'html-loader'
-  },
-  {
-    test: /\.css$/,
-    loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader"),
-  },
-  {
+module.exports =
+  [{
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!sass-loader?outputStyle=expanded")
-  }
-];
+    use: [{
+      loader: "style-loader" // creates style nodes from JS strings
+    }, {
+      loader: "css-loader" // translates CSS into CommonJS
+    }, {
+      loader: "sass-loader" // compiles Sass to CSS
+    }, {
+      loader: "ts-loader" // compiles Sass to CSS
+    }]
+  }, {
+    test: /\.ts$/,
+    use: 'ts-loader'
+  }];
