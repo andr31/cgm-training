@@ -1,7 +1,7 @@
 // karma requires this when using phantomjs
 require('phantomjs-polyfill');
 // our apps starting point
-import './index.dev'
+import '../app/index.dev'
 // include angular mocks
 import 'angular-mocks'
 

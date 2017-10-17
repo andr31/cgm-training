@@ -1,6 +1,6 @@
 exports.config = {
   specs: [
-    './src/e2e-tests/**/*.spec.js'
+    './src/test/e2e-tests/**/*.spec.js'
   ],
   framework: 'jasmine2',
   directConnect: true,

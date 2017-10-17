@@ -1,10 +1,10 @@
-var webpackConfig = require('./webpack-test.config.js');
+var webpackConfig = require('../../../webpack/webpack-test.config.js');
 require('phantomjs-polyfill');
 webpackConfig.entry = ""; // you can override anything you want from the project webpack config
 
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: '../../../',
     frameworks: ['jasmine', 'jasmine-matchers'],
     port: 9876,
     colors: true,
@@ -16,8 +16,8 @@ module.exports = function (config) {
     captureTimeout: 60000,
     browserNoActivityTimeout: 100000,
     files: [
-      './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      './src/test.ts'
+      '../../../node_modules/phantomjs-polyfill/bind-polyfill.js',
+      'src/test/test.ts'
     ],
     mime: {
       'text/x-typescript': ['ts', 'tsx']
@@ -28,8 +28,8 @@ module.exports = function (config) {
       }
     },
     preprocessors: {
-      './src/test.ts': ['webpack'],
-      './src/**/!(*.spec)+(.js)': ['coverage']
+      './src/test/test.ts': ['webpack'],
+      './src/test/**/!(*.spec)+(.js)': ['coverage']
     },
     webpackMiddleware: {
       stats: {
