@@ -5,7 +5,7 @@ import 'angular-ui-router';
 import * as angular from 'angular';
 // import 'ng-stats'
 // app css
-import './app.scss';
+import './stylesheets/partials/app.scss';
 // app imports
 import Common from './common/common';
 import Components from './components/components';

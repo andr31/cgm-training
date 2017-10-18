@@ -16,6 +16,8 @@
 
 4 Setup sass structur
 
+http://thesassway.com/beginner/how-to-structure-a-sass-project
+
 5 Setup a routing
 
 6 Create a landing page. See Screenshot landing-page

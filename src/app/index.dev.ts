@@ -6,7 +6,7 @@ import 'LogUnobtrusiveExtension/dist/log-ex-unobtrusive';
 import 'ng-stats';
 import * as angular from 'angular';
 // app css
-import './app.scss';
+import './stylesheets/partials/app.scss';
 // app imports
 import Common from './common/common';
 import Components from './components/components';
