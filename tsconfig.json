@@ -2,7 +2,7 @@
   "buildOnSave": false,
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "noImplicitAny": false,
     "removeComments": true,
     "sourceMap": true,
